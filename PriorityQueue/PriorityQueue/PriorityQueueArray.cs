@@ -61,13 +61,14 @@ namespace PriorityQueue
         {
             if (!IsEmpty())
             {
-                int MinimumItemindex = array[0].Priortiy;
+                int PopedItemIndex = array[0].Priortiy;
                 int index = 0;
-                for (int i = 1; i < rear; i++)
+                for (int i = 1; i <= rear; i++)
                 {
-                    if (array[i].Priortiy < MinimumItemindex)
+                    if (array[i].Priortiy < PopedItemIndex)
                     {
                         index = i;
+                        PopedItemIndex = array[i].Priortiy;
                     }
                 }
                 var minimumItem = "Poped Value : " + array[index].Value + " Priortiy : " + array[index].Priortiy;
